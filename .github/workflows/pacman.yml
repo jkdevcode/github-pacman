@@ -21,8 +21,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Create build dir
+        run: mkdir -p dist
+
       - name: Generate Pacman Contribution Graph
-        uses: abozanona/pacman-contribution-graph@main
+        uses: abozanona/pacman-contribution-graph@v5.0.0
         with:
           github_user_name: jkdevcode
 
